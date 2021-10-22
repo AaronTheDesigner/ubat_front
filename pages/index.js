@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Nav from '../components/Nav'
 import MobileNav from '../components/MobileNav';
 import Section from '../components/Section';
+import MainStandard from '../components/MainStandard';
 
 
 export default function Home() {
@@ -14,8 +15,9 @@ export default function Home() {
       </Head>
       <Nav />
       <MobileNav />
-      <Section />
-      <Section />
+      <main className="pt-14">
+        <MainStandard />
+      </main>
     </div>
   )
 }
