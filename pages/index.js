@@ -3,6 +3,7 @@ import Nav from '../components/Nav'
 import MobileNav from '../components/MobileNav';
 import Section from '../components/Section';
 import MainStandard from '../components/MainStandard';
+import Services from '../components/Services';
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <MobileNav />
       <main className="pt-14">
         <MainStandard />
+        <Services />
       </main>
     </div>
   )
