@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import MainStandard from '../components/MainStandard';
 import Services from '../components/Services';
 import Experience from '../components/Experience';
+import Reviews from '../components/Reviews';
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <MainStandard />
         <Services />
         <Experience />
+        <Reviews />
       </main>
     </div>
   )
