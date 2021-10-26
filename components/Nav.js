@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nav = () => {
     return (
-        <nav role="navigation" className="invisible md:visible w-full bg-gray-400 fixed flex justify-center">
+        <nav role="navigation" className="invisible md:z-50 md:visible w-full bg-gray-400 fixed flex justify-center">
             <div className="container flex px-8 py-2 justify-center gap-x-12">
                 {/* logo */}
                 <div className="text-3xl" >

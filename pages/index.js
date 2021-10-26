@@ -4,6 +4,7 @@ import MobileNav from '../components/MobileNav';
 import Section from '../components/Section';
 import MainStandard from '../components/MainStandard';
 import Services from '../components/Services';
+import Experience from '../components/Experience';
 
 
 export default function Home() {
@@ -16,9 +17,10 @@ export default function Home() {
       </Head>
       <Nav />
       <MobileNav />
-      <main className="pt-14">
+      <main className="pt-14 container mx-auto">
         <MainStandard />
         <Services />
+        <Experience />
       </main>
     </div>
   )
