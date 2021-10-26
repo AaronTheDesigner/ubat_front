@@ -18,8 +18,8 @@ const Experience = () => {
                 {/* Projects */}
                 <div className="px-6 py-4 md:mx-8 lg:mx-16">
                     <Project image={logo} title="Project Name" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida elementum consectetur facilisis vel quam ullamcorper. Condimentum sed ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum arcu maecenas imperdiet egestas lectus." services="Design + Development + CMS" />
-                    <Project />
-                    <Project />
+                    <Project image={logo} title="Project Name" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida elementum consectetur facilisis vel quam ullamcorper. Condimentum sed ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum arcu maecenas imperdiet egestas lectus." services="Design + Development + CMS" />
+                    <Project image={logo} title="Project Name" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida elementum consectetur facilisis vel quam ullamcorper. Condimentum sed ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum arcu maecenas imperdiet egestas lectus." services="Design + Development + CMS" />
                 </div>
             </div>
         </section>
