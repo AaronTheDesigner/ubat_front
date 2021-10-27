@@ -6,6 +6,8 @@ import MainStandard from '../components/MainStandard';
 import Services from '../components/Services';
 import Experience from '../components/Experience';
 import Reviews from '../components/Reviews';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 
 export default function Home() {
@@ -23,7 +25,9 @@ export default function Home() {
         <Services />
         <Experience />
         <Reviews />
+        <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
