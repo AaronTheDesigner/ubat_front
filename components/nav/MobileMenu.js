@@ -9,33 +9,33 @@ const MobileMenu = (props) => {
         <div className="flex z-50 flex-col bg-gray-500 h-screen items-center justify-center gap-y-8" role="mobile menu" >
             {/* logo */}
             <div className="text-3xl" >
-                <Link href="/">LOGO</Link>
+                <a href="/">LOGO</a>
             </div>
             {/* menu */}
             <div className="list-none flex flex-col justify-center items-center gap-y-5 text-2xl pb-3">
                 <div className="inline-block relative">
                     <li className="relative">
-                        <a href="#services" className="inline-block h-full w-full" onClick={props.select}>Services</a>
+                        <a href="/#services" className="inline-block h-full w-full" onClick={props.select}>Services</a>
                     </li>
                 </div>
                 <div className="inline-block relative">
                     <li className="relative">
-                        <Link href="/blog" className="inline-block h-full w-full" onClick={props.select}>Blog</Link>
+                        <a href="/blog" className="inline-block h-full w-full" onClick={props.select}>Blog</a>
                     </li>
                 </div>
                 <div className="inline-block relative">
                     <li className="relative">
-                        <a href="#" className="inline-block h-full w-full" onClick={props.select}>Experience</a>
+                        <a href="/#experience" className="inline-block h-full w-full" onClick={props.select}>Experience</a>
                     </li>
                 </div>
                 <div className="inline-block relative">
                     <li className="relative">
-                        <a href="#" className="inline-block h-full w-full" onClick={props.select}>Testimonials</a>
+                        <a href="/#reviews" className="inline-block h-full w-full" onClick={props.select}>Testimonials</a>
                     </li>
                 </div>
                 <div className="inline-block relative">
                     <li className="relative">
-                        <a href="#contact" className="inline-block h-full w-full" onClick={props.select}>Contact</a>
+                        <a href="/#contact" className="inline-block h-full w-full" onClick={props.select}>Contact</a>
                     </li>
                 </div>
             </div>

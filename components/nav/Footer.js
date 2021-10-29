@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -6,33 +7,33 @@ const Footer = () => {
             <div className="mx-56 my-12 flex flex-col gap-9 items-center lg:flex-row font-extralight justify-evenly">
                 {/* logo */}
                 <div className="text-md" >
-                    <a href="#">LOGO</a>
+                    <Link href="/">LOGO</Link>
                 </div>
                 {/* menu */}
                 <div className="list-none flex flex-col lg:flex-row justify-center items-center gap-3 text-s">
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Services</a>
+                            <Link href="/#services" className="inline-block h-full w-full">Services</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Blog</a>
+                            <Link href="/blog" className="inline-block h-full w-full">Blog</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Experience</a>
+                            <Link href="/#experience" className="inline-block h-full w-full">Experience</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Testimonials</a>
+                            <Link href="/#reviews" className="inline-block h-full w-full">Testimonials</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Contact</a>
+                            <Link href="/#contact" className="inline-block h-full w-full">Contact</Link>
                         </li>
                     </div>
                 </div>
