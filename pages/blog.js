@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import BlogContainer from '../components/pages/blog/BlogContainer';
 
 const blog = () => {
     return (
@@ -9,10 +10,8 @@ const blog = () => {
                 <title>Blog</title>
                 <link rel="icon" href="/assets/logo.svg" />
             </Head>
-            <main className="pt-14 container mx-auto">
-                <div className="">
-                    
-                </div>
+            <main>
+                <BlogContainer />
             </main>
         </Layout>
     )

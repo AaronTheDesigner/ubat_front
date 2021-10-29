@@ -9,7 +9,7 @@ const Layout = props => {
         <div>
             <Nav />
             <MobileNav />
-                <main>
+                <main className="pt-16 container mx-auto">
                     {props.children}
                 </main>
             <Footer />
