@@ -1,16 +1,15 @@
-import React from 'react'
-import Service from './Service'
-import Image from 'next/image';
-import design from '../public/assets/design_icon.svg';
-import cms from '../public/assets/cms_icon.svg';
-import dev from '../public/assets/dev_icon.svg';
-import social from '../public/assets/social_icon.svg';
+import React from 'react';
+import Service from './Service';
+import design from '../../../public/assets/design_icon.svg';
+import cms from '../../../public/assets/cms_icon.svg';
+import dev from '../../../public/assets/dev_icon.svg';
+import social from '../../../public/assets/social_icon.svg';
 
 const Services = () => {
 
     
     return (
-        <section id="#services" className="leading-loose relative">
+        <section id="services" className="leading-loose relative">
             <div>
                 Funn lil'banner
             </div>

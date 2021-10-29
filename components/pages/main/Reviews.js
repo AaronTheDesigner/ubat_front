@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Review from './Review';
-import person from '../public/assets/person_icon.svg';
+import person from '../../../public/assets/person_icon.svg';
 
 const Reviews = () => {
     return (

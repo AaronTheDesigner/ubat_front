@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const Nav = () => {
     return (
@@ -6,33 +7,33 @@ const Nav = () => {
             <div className="container flex px-8 py-2 justify-center gap-x-12">
                 {/* logo */}
                 <div className="text-3xl" >
-                    <a href="#">LOGO</a>
+                    <Link href="/">LOGO</Link>
                 </div>
                 {/* menu */}
                 <div className="list-none flex justify-center items-center gap-x-8 text-xs opacity-80 font-medium xl:text-sm xl:gap-x-12 xl:pl-10">
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Services</a>
+                            <Link href="/#services" className="inline-block h-full w-full">Services</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Blog</a>
+                            <Link href="/blog" className="inline-block h-full w-full">Blog</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Experience</a>
+                            <Link href="/#experience" className="inline-block h-full w-full">Experience</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Testimonials</a>
+                            <Link href="/#reviews" className="inline-block h-full w-full">Testimonials</Link>
                         </li>
                     </div>
                     <div className="inline-block relative">
                         <li className="relative">
-                            <a href="#" className="inline-block h-full w-full">Contact</a>
+                            <Link href="/#contact" className="inline-block h-full w-full">Contact</Link>
                         </li>
                     </div>
                 </div>

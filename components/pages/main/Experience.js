@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import logo from '../public/assets/logo.svg';
+import logo from '../../../public/assets/logo.svg';
 
 const Experience = () => {
     return (
