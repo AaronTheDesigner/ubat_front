@@ -64,7 +64,7 @@ const Footer = () => {
                     <a href="#">Terms &amp; Conditions</a>
                     <a href="#">Privacy Policy</a>
                 </div>
-                <div class="font-medium mb-1">© FTM 2021</div>
+                <div class="font-medium mb-1">© ATUpgrades 2021</div>
             </div>
         </footer>
     )
