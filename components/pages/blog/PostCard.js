@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import person_icon from '../../../public/assets/person_icon.svg'
+import Link from 'next/link';
 
 const PostCard = (props) => {
 
@@ -42,9 +43,9 @@ const PostCard = (props) => {
                 <p className="my-3">
                     {props.intro}
                 </p>
-                <a href="google.com" class="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
-                    <span class="text-lg opacity-75">Get Started</span>
-                </a>
+                <Link href="/read" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
+                    <span className="text-lg opacity-75">Get Started</span>
+                </Link>
             </div>
         </div>
     )

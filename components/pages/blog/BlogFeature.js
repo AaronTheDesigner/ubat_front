@@ -45,9 +45,9 @@ const BlogFeature = () => {
                 <p className="text-base break-words text-center font-thin p-3 lg:text-left">
                     {featuredPost.intro}
                 </p>
-                <a href="google.com" class="inline-block w-44 mx-auto my-4 text-center uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8 lg:mx-0">
-                    <span class="text-lg opacity-75">Read</span>
-                </a>
+                <Link 
+                    href="/read"
+                >Read</Link>
             </div>
             
         </div>
