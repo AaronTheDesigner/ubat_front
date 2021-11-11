@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon } from '@heroicons/react/solid';
 import MobileMenu from './MobileMenu';
+import Link from 'next/link';
 
 const MobileNav = () => {
     const [menu, setMenu] = useState(false);
