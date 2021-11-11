@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '../public/assets/logo.svg'
+import Link from 'next/link'
 
 const MainStandard = () => {
     return (
@@ -19,11 +20,11 @@ const MainStandard = () => {
                         Increase conversions for your small business. 
                     </p>
                     {/* CTA */}
-                    <a href="google.com" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
+                    <Link href="google.com" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
                         <span className="text-lg opacity-75">
                             Get Started
                         </span>
-                    </a>
+                    </Link>
                 </div>            
             </div>
             {/* Hero Image */}

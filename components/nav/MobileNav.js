@@ -14,7 +14,7 @@ const MobileNav = () => {
             <nav className="filter drop-shadow-md px-8 py-3 flex flex-row items-center justify-between bg-gray-500">
                 {/* logo */}
                 <div className="text-2xl" >
-                    <a href="#">LOGO</a>
+                    <Link href="#">LOGO</Link>
                 </div>
                 <div className="text-2xl" >
                     <MenuIcon className="h-10 w-10 cursor-pointer" onClick={() => toggleMenu()}/>
