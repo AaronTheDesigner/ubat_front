@@ -6,7 +6,7 @@ const Contact = () => {
             {/* Text and Form Container */}
             <div className="relative">
                 <h2 className="relative text-2xl font-bold text-center my-16 md:pl-12 md:text-3xl xl:pl-0">
-                    Let's Get to Work Today
+                    Do It Today
                 </h2>
             </div>
             {/* Form Container */}
