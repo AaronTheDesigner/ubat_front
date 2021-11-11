@@ -5,8 +5,11 @@ import Link from 'next/link';
 
 const PostCard = (props) => {
 
+    
+
     const renderTags = () => {
         return props.tags.map(tag => {
+            console.log(tag)
             return (
                 <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs">
                     {tag}

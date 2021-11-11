@@ -11,7 +11,7 @@ const BlogFeature = () => {
     const renderTags = () => {
         return featuredPost.tags.map(tag => {
             return (
-                <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs">
+                <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs" key={tag}>
                     {tag}
                 </li>
             )

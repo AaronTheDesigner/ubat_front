@@ -21,8 +21,8 @@ const Project = (props) => {
                 <p className="from-transparent italic">
                     {props.services}
                 </p>
-                <a href="#" class="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max">
-                    <span class="text-sm opacity-75">
+                <a href="#" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max">
+                    <span className="text-sm opacity-75">
                         Visit Project
                     </span>
                 </a>

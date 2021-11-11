@@ -11,12 +11,12 @@ const Services = () => {
     return (
         <section id="services" className="leading-loose relative">
             <div>
-                Funn lil'banner
+                Funn lil banner
             </div>
             {/* Headings and Text Container */}
             <div className="text-center pt-8 pb-24 px-4 md:pt-12 lg:flex lg:flex-col lg:items-center lg:pb-48">
                 <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
-                    How I'll Upgrade Your Business
+                    How I Will Upgrade Your Business
                 </h2>
                 <p className="text-sm mt-5 md:mx-auto lg:text-md lt:mt-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida rhoncus volutpat congue mattis sed mollis mollis.

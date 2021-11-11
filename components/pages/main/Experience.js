@@ -7,11 +7,11 @@ const Experience = () => {
         <section id="experience" className="px-4 pt-20 pb-24 bg-gray-100 md:px-20 lg:px-40 lg:pt-48">
             {/* Conteiner */}
             <div className="relative rounded-3xl py-8 shadow-lg overflow-hidden bg-white md:py-16 xl:max-w-screen-xl xl:mx-auto">
-                <div class="relative text-center px-2">
-                    <h2 class="relative text-2xl font-bold z-10 md:text-3xl lg:text-4xl">
+                <div className="relative text-center px-2">
+                    <h2 className="relative text-2xl font-bold z-10 md:text-3xl lg:text-4xl">
                         Several Projects I Enjoyed
                     </h2>
-                    <p class="relative text-sm mx-auto mt-5 z-10 lg:mt-6 lg:text-sm">
+                    <p className="relative text-sm mx-auto mt-5 z-10 lg:mt-6 lg:text-sm">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida rhoncus volutpat congue mattis sed mollis mollis.
                     </p>
                 </div>

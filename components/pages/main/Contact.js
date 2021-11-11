@@ -5,7 +5,7 @@ const Contact = () => {
         <section id="contact" className="relative mb-8 md:justify-center md:pb-16">
             {/* Text and Form Container */}
             <div className="relative">
-                <h2 class="relative text-2xl font-bold text-center my-16 md:pl-12 md:text-3xl xl:pl-0">
+                <h2 className="relative text-2xl font-bold text-center my-16 md:pl-12 md:text-3xl xl:pl-0">
                     Let's Get to Work Today
                 </h2>
             </div>
@@ -21,7 +21,7 @@ const Contact = () => {
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
                     </div>
                     <div className="">
-                        <button type="submit" id="submit-button" class="inline-block uppercase font-medium px-6 py-2 bg-black text-white shadow-md">
+                        <button type="submit" id="submit-button" className="inline-block uppercase font-medium px-6 py-2 bg-black text-white shadow-md">
                             Send
                         </button>
                     </div>
