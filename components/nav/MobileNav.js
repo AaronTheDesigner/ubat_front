@@ -22,7 +22,7 @@ const MobileNav = () => {
                 </div>
             </nav>
             <div className={menu ? "-translate-x-0 transition duration-500 ease-in-out" : "-translate-x-full transition duration-500 ease-in-out opacity-0"}>
-                <MobileMenu className="" select={() => toggleMenu()} />
+                <MobileMenu className="" onClick={toggleMenu} menu={menu} />
             </div>        
         </div>
     )

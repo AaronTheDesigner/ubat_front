@@ -1,41 +1,41 @@
 import React from 'react'
 import Link from 'next/link'
 
-const MobileMenu = (props) => {
+const MobileMenu = ({onClick}) => {
 
     // use a hook => onclick for each link slides the menu back to the side.
     // if ^^^ does not work, consider passing up props
     return (
         <div className="flex z-50 flex-col bg-gray-500 h-screen items-center justify-start overflow-y-scroll gap-y-8" role="mobile menu" >
             {/* logo */}
-            <div className="text-3xl" >
-                <Link href="/">LOGO</Link>
+            <div className="text-3xl" onClick={onClick}>
+                <Link href="/#">LOGO</Link>
             </div>
             {/* menu */}
             <div className="list-none flex flex-col justify-center items-center gap-y-5 text-2xl pb-3">
                 <div className="inline-block relative">
-                    <li className="relative">
-                        <Link href="/#services" className="inline-block h-full w-full" onClick={props.select}>Services</Link>
+                    <li className="relative" onClick={onClick}>
+                        <Link href="/#services" className="inline-block h-full w-full">Services</Link>
                     </li>
                 </div>
                 <div className="inline-block relative">
-                    <li className="relative">
-                        <Link href="/blog" className="inline-block h-full w-full" onClick={props.select}>Blog</Link>
+                    <li className="relative" onClick={onClick}>
+                        <Link href="/blog" className="inline-block h-full w-full">Blog</Link>
                     </li>
                 </div>
                 <div className="inline-block relative">
-                    <li className="relative">
-                        <Link href="/#experience" className="inline-block h-full w-full" onClick={props.select}>Experience</Link>
+                    <li className="relative" onClick={onClick}>
+                        <Link href="/#experience" className="inline-block h-full w-full">Experience</Link>
                     </li>
                 </div>
                 <div className="inline-block relative">
-                    <li className="relative">
-                        <Link href="/#reviews" className="inline-block h-full w-full" onClick={props.select}>Testimonials</Link>
+                    <li className="relative" onClick={onClick}>
+                        <Link href="/#reviews" className="inline-block h-full w-full">Testimonials</Link>
                     </li>
                 </div>
                 <div className="inline-block relative">
-                    <li className="relative">
-                        <Link href="/#contact" className="inline-block h-full w-full" onClick={props.select}>Contact</Link>
+                    <li className="relative" onClick={onClick}>
+                        <Link href="/#contact" className="inline-block h-full w-full">Contact</Link>
                     </li>
                 </div>
             </div>
