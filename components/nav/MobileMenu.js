@@ -6,7 +6,7 @@ const MobileMenu = ({onClick}) => {
     // use a hook => onclick for each link slides the menu back to the side.
     // if ^^^ does not work, consider passing up props
     return (
-        <div className="flex z-50 flex-col bg-gray-500 h-screen items-center overflow-y-scroll gap-y-4" role="mobile menu" >
+        <div className="flex z-50 flex-col bg-gray-500 h-screen items-center overflow-y-visible gap-y-4" role="mobile menu" >
             {/* logo */}
             <div className="text-4xl font-bold mt-20" onClick={onClick}>
                 <Link href="/#">LOGO</Link>

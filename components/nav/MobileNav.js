@@ -17,7 +17,7 @@ const MobileNav = () => {
                 <div className="text-base font-extrabold" >
                     <Link href="#">LOGO</Link>
                 </div>
-                <div className="flex gap-x-4 opacity-75 pr-7 ">
+                <div className="flex gap-x-4 opacity-75 pr-5 ">
                 <Link href="#" class="p-2">
                     <svg className="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>Email</title>
