@@ -38,7 +38,7 @@ const Nav = () => {
                     </div>
                 </div>
                 {/* social items */}
-                <div className="flex gap-x-4 opacity-75">
+                <div className="flex gap-x-4 opacity-75 h-full items-center">
                     <Link href="#" className="p-2">
                         <svg className="w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <title>Email</title>

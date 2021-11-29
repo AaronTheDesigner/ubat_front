@@ -4,7 +4,6 @@ import PostCard from '../components/pages/blog/PostCard';
 import BlogFeature from '../components/pages/blog/BlogFeature';
 
 type Post = {
-    uuid: string,
     id: string,
     title: string,
     custom_excerpt: string,
@@ -20,7 +19,7 @@ type Post = {
 
 async function getPosts() {
     const res = await fetch(
-      `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,primary_author,feature_image,slug,uuid&filter=featured:false`
+      `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,primary_author,feature_image,slug&filter=featured:false`
     ).then((res) => res.json())
   
     const posts = res.posts;
