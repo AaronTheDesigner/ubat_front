@@ -7,18 +7,17 @@ const PostCard = (props) => {
 
     
 
-    const renderTags = () => {
-        return props.tags.map(tag => {
-            return (
-                <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs" key={tag.id}>
-                    {tag.title}
-                </li>
-            )
-        })
-    }
-
+    // const renderTags = () => {
+    //     return props.tags.map(tag => {
+    //         return (
+    //             <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs" key={tag.id}>
+    //                 {tag.title}
+    //             </li>
+    //         )
+    //     })
+    // }
     return (
-        <div className="flex flex-col w-80 bg-gray-200 p-3 rounded-lg w shadow-md justify-between items-center" key={props.key}>
+        <div className="flex flex-col justify-between h-full">
             <div className="w-full h-48 relative">
                 <Image 
                     src={props.image}
@@ -35,15 +34,15 @@ const PostCard = (props) => {
                         width={25}
                     />
                     <p className="text-xl font-bold capitalize">
-                        Author Name
+                        {props.author.name}
                     </p>
             </span>
             <div className="flex flex-col text-center justify-between">
                 <ul className="flex justify-evenly my-2 gap-2 flex-wrap">
-                        {renderTags()}
+                        {/* {renderTags()} */}
                 </ul>
                 <p className="my-3">
-                    {props.intro}
+                    {props.excerpt}
                 </p>
                 <Link href="/read" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
                     <span className="text-lg opacity-75">Get Started</span>

@@ -6,6 +6,11 @@ import Experience from '../components/pages/main/Experience';
 import Reviews from '../components/pages/main/Reviews';
 import Contact from '../components/pages/main/Contact';
 
+// const BLOG_URL = 'https://ubat.herokuapp.com/'
+// const CONTENT_API_KEY = '806e85bd11db6cdb4369bee1a8'
+
+
+
 
 export default function Home() {
   return (
