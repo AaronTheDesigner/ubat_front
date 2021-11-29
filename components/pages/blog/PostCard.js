@@ -5,10 +5,7 @@ import Link from 'next/link';
 
 const PostCard = (props) => {
 
-
-    console.log(props.tags.map(tag => {
-        return tag.id
-    }))
+    console.log(props.author)
 
     return (
         <div className="flex flex-col justify-between h-full">
@@ -16,16 +13,18 @@ const PostCard = (props) => {
                 <Image 
                     src={props.image}
                     layout="fill"
+                    className="rounded-lg"
                 />
             </div>        
             <h1 className="font-bold text-xl text-center capitalize my-2">
                     {props.title}
             </h1>
-            <span className="flex items-center justify-center gap-5" >
+            <span className="flex items-center justify-center gap-3" >
                     <Image 
-                        src={person_icon}
+                        src={props.author.profile_image}
                         height={25}
                         width={25}
+                        className="rounded-full"
                     />
                     <p className="font-bold capitalize ">
                         {props.author.name}
@@ -42,8 +41,10 @@ const PostCard = (props) => {
                 <p className="my-3">
                     {props.excerpt}
                 </p>
-                <Link href="/read" className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8">
-                    <span className="text-lg opacity-75">Get Started</span>
+                <Link href="/read" className="">
+                    <span className="cursor-pointer text-lg opacity-75 inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8 bg-white">
+                        Read
+                    </span>
                 </Link>
             </div>
         </div>

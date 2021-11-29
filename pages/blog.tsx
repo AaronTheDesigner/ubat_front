@@ -25,24 +25,33 @@ async function getPosts() {
   
     const posts = res.posts;
 
-    console.log(posts)
-
     return posts
+}
+
+async function getFeatured() {
+    const res = await fetch(
+        `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,primary_author,feature_image,slug,uuid&filter=featured:true`
+    ).then((res) => res.json())
+
+    const featured = res.posts[0]
+
+    return featured
 }
 
 export const getStaticProps = async ({ params }) => {
     const posts = await getPosts()
+    const featured = await getFeatured()
 
     return {
-        props: { posts },
+        props: { posts, featured },
         revalidate: 10
     }
 }
 
 
-const Blog:React.FC<{ posts: Post[] }> = (props) => {
+const Blog:React.FC<{ posts: Post[], featured: Post }> = (props) => {
 
-    const { posts } = props;
+    const { posts, featured } = props;
 
     return (
         <Layout className="overflow-hidden" >
@@ -51,6 +60,13 @@ const Blog:React.FC<{ posts: Post[] }> = (props) => {
                 <link rel="icon" href="/assets/logo.svg" />
             </Head>
             <main>
+                <BlogFeature 
+                    title={featured.title}
+                    image={featured.feature_image}
+                    excerpt={featured.custom_excerpt}
+                    tags={featured.tags}
+                    author={featured.primary_author}
+                />
                 <div className="flex flex-wrap gap-3 justify-center py-5 sm:px-0 md:px-0 lg:px-28">
                     {posts.map(post => {
                         return ( 
