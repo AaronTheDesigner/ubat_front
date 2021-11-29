@@ -7,13 +7,17 @@ type Post = {
     id: string,
     title: string,
     custom_excerpt: string,
-    primary_author: string,
+    primary_author: {
+        profile_image: string,
+        name: string
+    },
     feature_image: string
     slug: string
-    tags: {
+    tags: [{
+        id: string,
         name: string,
-        id: string
-    }[]
+        slug: string
+    }]
 }
 
 
@@ -65,6 +69,7 @@ const Blog:React.FC<{ posts: Post[], featured: Post }> = (props) => {
                     excerpt={featured.custom_excerpt}
                     tags={featured.tags}
                     author={featured.primary_author}
+                    slug={featured.slug}
                 />
                 <div className="flex flex-wrap gap-3 justify-center py-5 sm:px-0 md:px-0 lg:px-28">
                     {posts.map(post => {
@@ -76,6 +81,7 @@ const Blog:React.FC<{ posts: Post[], featured: Post }> = (props) => {
                                 excerpt={post.custom_excerpt}
                                 tags={post.tags}
                                 author={post.primary_author}
+                                slug={post.slug}
                             />
                         </div>
                         )

@@ -1,10 +1,15 @@
 import React from 'react';
-import posts from './posts';
 import Image from 'next/image';
-import person_icon from '../../../public/assets/person_icon.svg';
 import Link from 'next/link';
 
-const BlogFeature = (props) => {
+const BlogFeature:React.FC<{
+                        title: string, 
+                        image: string, 
+                        author, 
+                        excerpt: string, 
+                        tags, 
+                        slug: string
+                    }> = (props) => {
 
     const { title, image, author, excerpt, tags, slug } = props;
     
