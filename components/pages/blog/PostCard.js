@@ -5,17 +5,11 @@ import Link from 'next/link';
 
 const PostCard = (props) => {
 
-    
 
-    // const renderTags = () => {
-    //     return props.tags.map(tag => {
-    //         return (
-    //             <li className="bg-gray-400 py-1 px-2 rounded-xl text-xs" key={tag.id}>
-    //                 {tag.title}
-    //             </li>
-    //         )
-    //     })
-    // }
+    console.log(props.tags.map(tag => {
+        return tag.id
+    }))
+
     return (
         <div className="flex flex-col justify-between h-full">
             <div className="w-full h-48 relative">
@@ -24,22 +18,26 @@ const PostCard = (props) => {
                     layout="fill"
                 />
             </div>        
-            <h1 className="font-bold text-2xl text-center capitalize my-2">
+            <h1 className="font-bold text-xl text-center capitalize my-2">
                     {props.title}
             </h1>
-            <span className="flex items-center gap-5" >
+            <span className="flex items-center justify-center gap-5" >
                     <Image 
                         src={person_icon}
                         height={25}
                         width={25}
                     />
-                    <p className="text-xl font-bold capitalize">
+                    <p className="font-bold capitalize ">
                         {props.author.name}
                     </p>
             </span>
             <div className="flex flex-col text-center justify-between">
                 <ul className="flex justify-evenly my-2 gap-2 flex-wrap">
-                        {/* {renderTags()} */}
+                        {props.tags.map(tag => {
+                            return <li className="rounded-full bg-white py-1 px-2" key={tag.id}>
+                                {tag.name}
+                            </li>
+                        })}
                 </ul>
                 <p className="my-3">
                     {props.excerpt}
