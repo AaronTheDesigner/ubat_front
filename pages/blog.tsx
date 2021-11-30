@@ -7,6 +7,7 @@ type Post = {
     id: string,
     title: string,
     custom_excerpt: string,
+    featured,
     primary_author: {
         profile_image: string,
         name: string
@@ -23,7 +24,7 @@ type Post = {
 
 async function getPosts() {
     const res = await fetch(
-      `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,primary_author,feature_image,slug&filter=featured:false`
+      `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,featured,primary_author,feature_image,slug&filter=tag:blog`
     ).then((res) => res.json())
   
     const posts = res.posts;
@@ -31,30 +32,23 @@ async function getPosts() {
     return posts
 }
 
-async function getFeatured() {
-    const res = await fetch(
-        `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,primary_author,feature_image,slug,uuid&filter=featured:true`
-    ).then((res) => res.json())
-
-    const featured = res.posts[0]
-
-    return featured
-}
-
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async () => {
     const posts = await getPosts()
-    const featured = await getFeatured()
 
     return {
-        props: { posts, featured },
+        props: { posts },
         revalidate: 10
     }
 }
 
 
-const Blog:React.FC<{ posts: Post[], featured: Post }> = (props) => {
+const Blog:React.FC<{ posts: Post[] }> = (props) => {
 
-    const { posts, featured } = props;
+    const { posts } = props;
+
+    const standardPosts = posts.filter(post => {return post.featured === false})
+
+    const featuredPost = posts.find(post => {return post.featured === true});
 
     return (
         <Layout className="overflow-hidden" >
@@ -64,15 +58,15 @@ const Blog:React.FC<{ posts: Post[], featured: Post }> = (props) => {
             </Head>
             <main>
                 <BlogFeature 
-                    title={featured.title}
-                    image={featured.feature_image}
-                    excerpt={featured.custom_excerpt}
-                    tags={featured.tags}
-                    author={featured.primary_author}
-                    slug={featured.slug}
+                    title={featuredPost.title}
+                    image={featuredPost.feature_image}
+                    excerpt={featuredPost.custom_excerpt}
+                    tags={featuredPost.tags}
+                    author={featuredPost.primary_author}
+                    slug={featuredPost.slug}
                 />
                 <div className="flex flex-wrap gap-3 justify-center py-5 sm:px-0 md:px-0 lg:px-28">
-                    {posts.map(post => {
+                    {standardPosts.map(post => {
                         return ( 
                         <div className="flex flex-col w-80 bg-gray-200 p-3 rounded-lg w shadow-md justify-between items-center" key={post.id}>
                             <PostCard

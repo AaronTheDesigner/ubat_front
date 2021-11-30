@@ -58,7 +58,7 @@ const PostCard:React.FC<{
                 <p className="my-3">
                     {excerpt}
                 </p>
-                <Link href="/read">
+                <Link href="/post/[slug]" as={`/post/${slug}`} >
                     <span className="cursor-pointer text-lg opacity-75 inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8 bg-white">
                         Read
                     </span>
