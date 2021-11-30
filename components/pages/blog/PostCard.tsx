@@ -24,6 +24,8 @@ const PostCard:React.FC<{
 
     const { title, image, author, excerpt, tags, slug } = props;
 
+    const modedTags = tags.filter(tag => tag.name != 'Blog');
+
     return (
         <div className="flex flex-col justify-between h-full">
             <div className="w-full h-48 relative">
@@ -49,7 +51,7 @@ const PostCard:React.FC<{
             </span>
             <div className="flex flex-col text-center justify-between">
                 <ul className="flex justify-evenly my-2 gap-2 flex-wrap">
-                        {tags.map(tag => {
+                        {modedTags.map(tag => {
                             return <li className="rounded-full bg-white py-1 px-2" key={tag.id}>
                                 {tag.name}
                             </li>

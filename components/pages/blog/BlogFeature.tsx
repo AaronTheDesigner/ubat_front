@@ -2,16 +2,29 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+type Author = {
+    profile_image: string,
+    name: string
+}
+
+type Tags = [{
+    id: string,
+    name: string,
+    slug: string
+}]
+
 const BlogFeature:React.FC<{
                         title: string, 
                         image: string, 
-                        author, 
+                        author: Author,
                         excerpt: string, 
-                        tags, 
+                        tags: Tags,
                         slug: string
                     }> = (props) => {
 
     const { title, image, author, excerpt, tags, slug } = props;
+
+    const modedTags = tags.filter(tag => tag.name != 'Blog');
     
     return (
         <div className="flex flex-col p-8 rounded-lg bg-gray-100 gap-3 md:mx-0 lg:mx-48 lg:my-12 lg:p-6 lg:flex-row xl:mx-36 2xl:mx-64">
@@ -44,7 +57,7 @@ const BlogFeature:React.FC<{
                     </p>
                 </span>
                 <ul className="flex my-4 gap-x-4">
-                        {tags.map(tag => {
+                        {modedTags.map(tag => {
                             return <li className="rounded-full bg-white py-1 px-2" key={tag.id}>
                                 {tag.name}
                             </li>

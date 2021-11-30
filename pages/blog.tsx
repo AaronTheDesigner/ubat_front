@@ -7,7 +7,7 @@ type Post = {
     id: string,
     title: string,
     custom_excerpt: string,
-    featured,
+    featured: boolean,
     primary_author: {
         profile_image: string,
         name: string
