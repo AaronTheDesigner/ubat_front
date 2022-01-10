@@ -11,7 +11,7 @@ const MobileNav = () => {
     }
 
     return (
-        <div className="visible z-50 md:invisible md:z-0 fixed w-full">
+        <div className="visible z-50 md:invisible md:z-0 h-10 fixed w-full">
             <nav className="filter drop-shadow-md px-8 py-3 flex flex-row items-center justify-between bg-gray-500">
                 {/* logo */}
                 <div className="text-base font-extrabold" >
