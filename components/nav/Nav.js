@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'
+import logo from '../../public/assets/logo.svg'
 
 const Nav = () => {
     return (
@@ -7,7 +9,13 @@ const Nav = () => {
             <div className="container flex px-8 py-2 justify-center gap-x-12">
                 {/* logo */}
                 <div className="text-3xl" >
-                    <Link href="/">LOGO</Link>
+                <Link href="/#">
+                    <Image
+                        src={logo}
+                        height={30}
+                        width={30}
+                    />
+                </Link>
                 </div>
                 {/* menu */}
                 <div className="list-none flex justify-center items-center gap-x-8 text-xs opacity-80 font-medium xl:text-sm xl:gap-x-12 xl:pl-10">

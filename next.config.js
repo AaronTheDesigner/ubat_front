@@ -5,6 +5,6 @@ module.exports = {
     BLOG_URL: 'https://ubat.herokuapp.com',
   },
   images: {
-    domains: ['static.ghost.org']
+    domains: ['static.ghost.org', 'res-5.cloudinary.com', "res-2.cloudinary.com"]
   },
 }

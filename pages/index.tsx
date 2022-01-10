@@ -5,11 +5,12 @@ import Services from '../components/pages/main/Services';
 import Experience from '../components/pages/main/Experience';
 import Reviews from '../components/pages/main/Reviews';
 import Contact from '../components/pages/main/Contact';
+import Project from '../components/pages/main/Project';
 
 // const BLOG_URL = 'https://ubat.herokuapp.com/'
 // const CONTENT_API_KEY = '806e85bd11db6cdb4369bee1a8'
 
-type Post = {
+type Project = {
   id: string,
   title: string,
   custom_excerpt: string,
@@ -48,9 +49,9 @@ export const getStaticProps = async () => {
 }
 
 
-const Home:React.FC<{ posts: Post[] }> = (props) => {
+const Home:React.FC<{ projects: Project[] }> = (props) => {
 
-  console.log(props)
+  const { projects } = props;
 
   return (
     <Layout className="overflow-hidden">
@@ -61,7 +62,7 @@ const Home:React.FC<{ posts: Post[] }> = (props) => {
       </Head>
       <MainStandard />
       <Services />
-      <Experience />
+      <Experience projects={projects} />
       <Reviews />
       <Contact />
     </Layout>
