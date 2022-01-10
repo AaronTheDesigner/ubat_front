@@ -2,7 +2,11 @@ import React from 'react';
 import Project from './Project';
 import logo from '../../../public/assets/logo.svg';
 
-const Experience = () => {
+
+const Experience = (props) => {
+
+    //console.log(props)
+
     return (
         <section id="experience" className="px-4 pt-20 pb-24 bg-gray-100 md:px-20 lg:px-40 lg:pt-48">
             {/* Conteiner */}

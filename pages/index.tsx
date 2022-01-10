@@ -9,10 +9,49 @@ import Contact from '../components/pages/main/Contact';
 // const BLOG_URL = 'https://ubat.herokuapp.com/'
 // const CONTENT_API_KEY = '806e85bd11db6cdb4369bee1a8'
 
+type Post = {
+  id: string,
+  title: string,
+  custom_excerpt: string,
+  featured: boolean,
+  primary_author: {
+      profile_image: string,
+      name: string
+  },
+  feature_image: string
+  slug: string
+  tags: [{
+      id: string,
+      name: string,
+      slug: string
+  }]
+}
 
 
+async function getPosts() {
+  const res = await fetch(
+    `${process.env.BLOG_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&include=authors&include=tags&fields=id,title,custom_excerpt,featured,primary_author,feature_image,slug&filter=tag:experience`
+  ).then((res) => res.json())
 
-export default function Home() {
+  const projects = res.posts;
+
+  return projects
+}
+
+export const getStaticProps = async () => {
+  const projects = await getPosts()
+
+  return {
+      props: { projects },
+      revalidate: 10
+  }
+}
+
+
+const Home:React.FC<{ posts: Post[] }> = (props) => {
+
+  console.log(props)
+
   return (
     <Layout className="overflow-hidden">
       <Head>
@@ -28,3 +67,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default Home
