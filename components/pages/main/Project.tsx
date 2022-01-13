@@ -25,10 +25,10 @@ const Project:React.FC<{
     const modedTags = tags.filter(tag => tag.name != 'Experience');
 
     return (
-        <div className="py-12 gap-y-10 flex flex-col items-center mx-10 md:gap-x-14 lg:gap-y-0 xl:flex-row even:xl:flex-row-reverse">
+        <div className="flex flex-col items-center md:py-12 md:gap-y-10 md:mx-10 md:gap-x-14 lg:gap-y-0 xl:flex-row even:xl:flex-row-reverse">
             {/* Project Image */}
-            <div className="w-1/2">
-                <div className="h-60 w-auto relative">
+            <div className="w-72 h-92 mb-10 sm:w-full m:w-1/2 ">
+                <div className=" h-48 sm:h-96 w-auto relative">
                 <Image 
                     src={image}
                     layout='fill'
@@ -37,7 +37,7 @@ const Project:React.FC<{
                 
             </div>
             {/* Project Details */}
-            <div className=" w-1/2 flex flex-col gap-y-6">
+            <div className="w-full flex flex-col gap-y-6 m:w-1/2">
                 <h3>
                     {title}
                 </h3>
