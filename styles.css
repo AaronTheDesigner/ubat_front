@@ -4,10 +4,6 @@
 
 
 .logo {
-    filter: drop-shadow()
+    filter: drop-shadow(-5px 6px 4px rgba(10, 10, 11, 0.568));
 }
 
-#initials {
-    stroke-dasharray: 84;
-    stroke-dashoffset: 384;
-}
