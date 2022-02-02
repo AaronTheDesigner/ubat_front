@@ -3,18 +3,11 @@
 }
 
 
-.line-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-
+.logo {
+    filter: drop-shadow()
 }
 
-svg {
-    display: inline-block;
-    height: 100%;
+#initials {
+    stroke-dasharray: 84;
+    stroke-dashoffset: 384;
 }
