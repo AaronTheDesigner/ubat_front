@@ -6,9 +6,11 @@ import LogoInline from '../LogoInline'
 
 const Nav = () => {
     return (
-        <nav className='text-white flex items-center justify-between px-3 flex-wrap'>
+        <nav className='text-white flex items-center justify-between px-3 py-2 flex-wrap bg-lightblue'>
+            {/* logo */}
             <div className=""><LogoInline/></div>
-            <div className="flex gap-x-2">
+            {/* social */}
+            <div className="flex gap-x-2 md:order-last">
                 <Link href="#email" class="p-2">
                     <svg className="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>Email</title>
@@ -28,7 +30,8 @@ const Nav = () => {
                     </svg>
                 </Link>
             </div>
-            <div className="p-1 w-64 grid place-items-center">
+            {/* links */}
+            <div className="p-1 grid place-items-center md:text-xl">
                 <ul className="flex">
                     <Link href="#about">
                         <a className='mx-2 dosis-bold uppercase tracking-widest'>
