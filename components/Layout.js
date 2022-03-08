@@ -8,7 +8,6 @@ const Layout = props => {
     return (
         <div>
             <Nav />
-            <MobileNav />
                 <main className="pt-16 container mx-auto">
                     {props.children}
                 </main>

@@ -1,9 +1,81 @@
-* {
-    scroll-behavior: smooth;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+    background-color: #0F1624;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Equinox-Bold';
+    src: url('./public/fonts/equinox/Equinox-Bold.woff');
+}
+
+@font-face {
+    font-family: 'Equinox-Regular';
+    src: url('./public/fonts/equinox/Equinox-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Dosis-Bold';
+    src: url('./public/fonts/dosis/Dosis-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Dosis-SemiBold';
+    src: url('./public/fonts/dosis/Dosis-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Dosis-Medium';
+    src: url('./public/fonts/dosis/Dosis-Medium.ttf');
+}
+
+.equinox-bold {
+    font-family: 'Equinox-Bold'
+}
+
+.equinox-regular {
+    font-family: 'Equinox-Regular';
+}
+
+.dosis-bold {
+    font-family: 'Dosis-Bold';
+}
+
+.dosis-semibold {
+    font-family: 'Dosis-SemiBold';
+}
+
+.dosis-medium {
+    font-family: 'Dosis-Medium';
+}
+
 
 
 .logo {
-    filter: drop-shadow(-5px 6px 4px rgba(10, 10, 11, 0.568));
+    background-color: #945DD6;
+    background-image: linear-gradient(100deg, #F46737, #945DD6, #13ADC7);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 

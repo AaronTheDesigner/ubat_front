@@ -5,7 +5,16 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: '#0F1624',
+        teal: '#13ADC7',
+        purple: '#945DD6',
+        orange: '#F46737',
+        white: '#FBFBFB',
+      }
+    },
+    
   },
   variants: {
     extend: {},
