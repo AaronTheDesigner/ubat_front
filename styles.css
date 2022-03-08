@@ -73,6 +73,11 @@ a {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+    transition: 2s;
+}
+
+.logo:hover {
+    background-image: linear-gradient(100deg, #13ADC7, #945DD6,#F46737 );
 }
 
 @tailwind base;

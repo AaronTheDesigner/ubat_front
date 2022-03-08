@@ -6,8 +6,8 @@ import Link from 'next/link'
 const MainStandard = () => {
     return (
         // Hero
-        <div className="flex">
-            
+        <div className="flex text-white">
+            stff
         </div>
     )
 }
