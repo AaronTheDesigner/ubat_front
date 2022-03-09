@@ -18,6 +18,8 @@ a {
   scroll-behavior: smooth;
 }
 
+/* fonts */
+
 @font-face {
     font-family: 'Equinox-Bold';
     src: url('./public/fonts/equinox/Equinox-Bold.woff');
@@ -63,22 +65,62 @@ a {
     font-family: 'Dosis-Medium';
 }
 
-
+/* nav animations */
 
 .logo {
-    background-color: #945DD6;
-    background-image: linear-gradient(100deg, #F46737, #945DD6, #13ADC7);
-    background-size: 100%;
+    background: #945DD6;
+    background: linear-gradient(100deg, #F46737, #945DD6, #13ADC7, #945DD6, #F46737);
+    background-size: 200%; 
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    transition: 2s;
+    transition: color .2s ease-in-out;
+    background-position: right;
+    background-repeat: repeat-x;
+    transition: .8s;
 }
 
 .logo:hover {
-    background-image: linear-gradient(100deg, #13ADC7, #945DD6,#F46737 );
+    background-position: -100%
 }
+
+.logoname {
+    background: #FBFBFB;
+    background: linear-gradient(100deg, #FBFBFB 50%, #13ADC7, #945DD6, #F46737);
+    background-size: 260%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-position: left;
+    transition: .5s all;    
+}
+
+.logoname:hover {
+    background-position: 100%;
+}
+
+.navitem {
+    background: #FBFBFB;
+    background: linear-gradient(100deg, #FBFBFB 50%, #13ADC7, #945DD6, #F46737);
+    background-size: 260%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-position: left;
+    transition: .3s ease-in;    
+}
+
+.navitem:hover {
+    background-position: 100%;
+    transform: scale(1.2);
+}
+
+
+
+/* tailwind integrations */
 
 @tailwind base;
 @tailwind components;
