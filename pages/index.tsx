@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import MainStandard from '../components/MainStandard';
-import Services from '../components/pages/main/Services';
+import Services from '../components/Services';
 import Experience from '../components/pages/main/Experience';
 import Reviews from '../components/pages/main/Reviews';
 import Contact from '../components/pages/main/Contact';
@@ -61,6 +61,7 @@ const Home:React.FC<{ projects: Project[] }> = (props) => {
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
       <MainStandard/>
+      <Services />
     </Layout> 
   )
 }
