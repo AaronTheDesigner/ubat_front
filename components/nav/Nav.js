@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import SocialIcon from './SocialIcon'
-import Image from 'next/image'
-import LogoInline from '../LogoInline'
+import LogoInline from '../LogoInline';
 
 
 
 const Nav = () => {
     return (
-        <nav className='flex items-center justify-between flex-wrap bg-lightblue px-5 py-2 sm:px-10 sm:py-3 md:px-16 lg:px-28 xl:px-60 xl:py-5'>
+        <nav className='flex items-center z-50 justify-between flex-wrap bg-blue px-5 py-2 sm:px-10 sm:py-3 md:px-16 lg:px-28 xl:px-60 xl:py-5'>
             {/* logo */}
             <div className="md:w-1/5">
                 <Link href="/">
@@ -45,25 +43,25 @@ const Nav = () => {
                 </Link>
             </div>
             {/* links */}
-            <div className=" text-gray-300 md:text-sm lg:grid lg:place-items-center lg:text-sm xl:text-sm md:w-3/5">
+            <div className=" text-gray-300 md:text-sm lg:grid lg:place-items-center lg:text-sm xl:text-base md:w-3/5">
                 <ul className="flex md:justify-center xl:w-full xl:justify-evenly">
                     <Link href="#about">
-                        <a className='navitem mx-2 dosis-semibold uppercase tracking-widest'>
+                        <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>About</li>
                         </a>
                     </Link>
                     <Link href="#about">
-                        <a className='navitem mx-2 dosis-semibold uppercase tracking-widest'>
+                        <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Blog</li>
                         </a>
                     </Link>
                     <Link href="#about">
-                        <a className='navitem mx-2 dosis-semibold uppercase tracking-widest'>
+                        <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Work</li>
                         </a>
                     </Link>
                     <Link href="#about">
-                        <a className='navitem mx-2 dosis-semibold uppercase tracking-widest'>
+                        <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Contact</li>
                         </a>
                     </Link>
