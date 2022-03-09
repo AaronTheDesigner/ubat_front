@@ -45,7 +45,7 @@ const Nav = () => {
                 </Link>
             </div>
             {/* links */}
-            <div className=" text-gray-300 md:text-base lg:grid lg:place-items-center lg:text-base xl:text-lg md:w-3/5">
+            <div className=" text-gray-300 md:text-sm lg:grid lg:place-items-center lg:text-sm xl:text-sm md:w-3/5">
                 <ul className="flex md:justify-center xl:w-full xl:justify-evenly">
                     <Link href="#about">
                         <a className='navitem mx-2 dosis-semibold uppercase tracking-widest'>
