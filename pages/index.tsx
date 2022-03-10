@@ -62,6 +62,7 @@ const Home:React.FC<{ projects: Project[] }> = (props) => {
       </Head>
       <MainStandard/>
       <Services />
+      <Experience projects={projects} />
     </Layout> 
   )
 }
