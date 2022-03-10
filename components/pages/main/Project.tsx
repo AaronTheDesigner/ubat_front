@@ -35,8 +35,8 @@ const Project:React.FC<{
                             src={image}
                             layout="responsive"
                             // sizes="50vh"
-                            height={2}
-                            width={3}
+                            height={6}
+                            width={10}
                             className="rounded-md"
                         />                        
                 </div>
