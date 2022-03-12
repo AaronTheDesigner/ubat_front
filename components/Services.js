@@ -4,7 +4,7 @@ const Services = () => {
 
     
     return (
-        <section id="services" className="my-20 px-5 sm:px-10 md:px-16">
+        <section id="services" className="my-20 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
             <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-9">How I Can Help You</div>
             <div className="flex flex-col gap-7">
                 {/* service */}

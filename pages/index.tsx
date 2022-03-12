@@ -4,10 +4,9 @@ import Layout from '../components/Layout';
 import MainStandard from '../components/MainStandard';
 import Services from '../components/Services';
 import Experience from '../components/pages/main/Experience';
-import Reviews from '../components/pages/main/Reviews';
-import Contact from '../components/pages/main/Contact';
 import Project from '../components/pages/main/Project';
-import LogoFull from '../components/LogoFull';
+import CTASection from '../components/CTASection';
+
 
 
 type Project = {
@@ -63,6 +62,7 @@ const Home:React.FC<{ projects: Project[] }> = (props) => {
       <MainStandard/>
       <Services />
       <Experience projects={projects} />
+      <CTASection />
     </Layout> 
   )
 }

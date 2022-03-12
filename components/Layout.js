@@ -8,7 +8,7 @@ const Layout = props => {
     return (
         <div>
             <Nav />
-                <main className="px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+                <main className="">
                     {props.children}
                 </main>
         </div>

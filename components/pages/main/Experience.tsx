@@ -24,44 +24,23 @@ const Experience:React.FC<{ projects: Project[] }> = (props) => {
 
     const { projects } = props;
 
-    // return (
-    //     <section id="experience" className="flex flex-col gap-5">
-    //             {/* Projects */}
-    //             <div className="px-6 py-4 md:mx-8 lg:mx-16">
-    //                 {projects.map(project => {
-    //                 return (<div className="my-8 md:mx-8 lg:mx-16" key={project.id}>
-    //                     <Project 
-    //                         title={project.title} 
-    //                         image={project.feature_image} 
-    //                         custom_excerpt={project.custom_excerpt} 
-    //                         author={project.primary_author}
-    //                         slug={project.slug}
-    //                         tags={project.tags}
-    //                     />
-    //                 </div>)
-    //             })}
-    //             </div>
-    //     </section>
-    // )
-
     return (
-        <section id="experience" className="my-20">
-            <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-9">Some of My Work</div>
+        <section id="experience" className="my-20 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+            <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-20">Some of My Work</div>
             {/* Container */}
             <div className="flex flex-col items-center gap-10">
-            {projects.map(project => {
-                return (<div key={project.id}>
-                    <Project 
-                        title={project.title} 
-                        image={project.feature_image} 
-                        custom_excerpt={project.custom_excerpt} 
-                        author={project.primary_author}
-                        slug={project.slug}
-                        tags={project.tags}
-                    />
-                </div>)
-            })}
-
+                {projects.map(project => {
+                    return (<div key={project.id}>
+                        <Project 
+                            title={project.title} 
+                            image={project.feature_image} 
+                            custom_excerpt={project.custom_excerpt} 
+                            author={project.primary_author}
+                            slug={project.slug}
+                            tags={project.tags}
+                        />
+                    </div>)
+                })}
             </div>
         </section>
     )
