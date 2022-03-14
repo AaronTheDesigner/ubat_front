@@ -3,23 +3,36 @@ import Image from 'next/image';
 import Review from './Review';
 import person from '../../../public/assets/person_icon.svg';
 
+const One = {
+    image: `url(../assets/jayrequard.jpg)`,
+    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    name: `Jay Requard`,
+    company: `Author`
+} 
+
+const Two = {
+    image: `url(../assets/obed.jpg)`,
+    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    name: `Obed Arguedas`,
+    company: `Inside Out Home Improvement`
+} 
+
+const Three = {
+    image: `url(../assets/darrell.jpg)`,
+    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    name: `Darrell Zamora`,
+    company: `Agora Window Cleaning`
+} 
+
 const Reviews = () => {
     return (
-        <section id="reviews" className="my-10 mx-5 flex flex-col gap-y-8">
-            <div className="relative text-center px-2">
-                <h2 className="relative text-2xl font-bold z-10 md:text-3xl lg:text-4xl">
-                    Hear From Others
-                </h2>
-                <p className="relative text-sm mx-auto mt-5 z-10 lg:mt-6 lg:text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida rhoncus volutpat congue mattis sed mollis mollis.
-                </p>
+        <section id="reviews" className="bg-lighterblue py-10 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+            <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-9">Hear from others</div>
+            <div className="flex flex-wrap justify-center items-center gap-10 w-full">
+                <Review name={One.name} quote={One.quote} image={One.image} company={One.company} />
+                <Review name={Two.name} quote={Two.quote} image={Two.image} company={Two.company} />
+                <Review name={Three.name} quote={Three.quote} image={Three.image} company={Three.company} />
             </div>
-            <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 lg:gap-y-0">
-                <Review image={person} quote="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt veritatis quo quidem nulla expedita, reiciendis illum possimus eaque corporis distinctio eligendi voluptatum unde officiis magni vel quos sunt quia tempora."/>
-                <Review image={person} quote="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt veritatis quo quidem nulla expedita, reiciendis illum possimus eaque corporis distinctio eligendi voluptatum unde officiis magni vel quos sunt quia tempora."/>
-                <Review image={person} quote="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt veritatis quo quidem nulla expedita, reiciendis illum possimus eaque corporis distinctio eligendi voluptatum unde officiis magni vel quos sunt quia tempora."/>
-            </div>
-            
         </section>
     )
 }
