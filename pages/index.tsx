@@ -59,6 +59,7 @@ const Home:React.FC<{ projects: Project[] }> = (props) => {
       <Head>
         <title>Upgrades By Aaron Toliver: Web Development, App Development</title>
         <meta name="description" content="Web Development, App Development" />
+        <meta name="theme" content="#0F1624" />
         <link rel="icon" href="/assets/UAT.svg" />
       </Head>
       <MainStandard/>
