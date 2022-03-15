@@ -45,22 +45,22 @@ const Nav = () => {
             {/* links */}
             <div className=" text-gray-300 md:text-sm lg:grid lg:place-items-center lg:text-sm xl:text-base md:w-3/5">
                 <ul className="flex md:justify-center xl:w-full xl:justify-evenly">
-                    <Link href="#about">
+                    <Link href="#services">
                         <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
-                            <li>About</li>
+                            <li>Services</li>
                         </a>
                     </Link>
-                    <Link href="#about">
+                    {/* <Link href="#about">
                         <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Blog</li>
                         </a>
-                    </Link>
-                    <Link href="#about">
+                    </Link> */}
+                    <Link href="#work">
                         <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Work</li>
                         </a>
                     </Link>
-                    <Link href="#about">
+                    <Link href="#contact">
                         <a className='navitem mx-2 dosis-bold uppercase tracking-widest'>
                             <li>Contact</li>
                         </a>

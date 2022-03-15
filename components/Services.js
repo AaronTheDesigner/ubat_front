@@ -1,5 +1,20 @@
 import React from 'react';
 
+const website = {
+    title: `websites that work`,
+    description: `You want a low maintenance website that will grow your business. It has to look good, and convert users into leads. I'll design to your specifications, live-build so you can see the work, and deploy to the domain of your choice.`
+}
+
+const code = {
+    title: `custom code`,
+    description: `Drag-and-drop web builders can be a... drag. The learning curve may not be worht the time. Unused features may not be worth the price. I will provide a custom code solution that fits your company's exact needs. Pick and choose your features.`
+}
+
+const asset = {
+    title: `expense to asset`,
+    description: `Is your company's website outdated, buggy, or broken? My free web analysis will diagnose exactly what needs to be done, and I can rebuild to meet your needs.`
+}
+
 const Services = () => {
 
     
@@ -11,10 +26,10 @@ const Services = () => {
                 <div className="gap-5 service flex flex-col sm:flex-row sm:items-center">
                     <div className="flex flex-col gap-y-3">
                         <div className="text-white equinox-bold tracking-wider uppercase text-xl md:text-2xl 2xl:text-3xl">
-                            1. Web Sites That Work    
+                            1. {website.title}   
                         </div>
                         <p className="dosis-medium text-white md:text-lg 2xl:text-2xl 2xl:pr-4">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat corporis, odio eaque inventore facilis quidem, deleniti quam minus error ad sint temporibus officiis repudiandae alias, blanditiis nesciunt laborum maxime tenetur!    
+                            {website.description}    
                         </p>
                     </div>
                     <div className="pic p-4 grid place-items-center">
@@ -34,10 +49,10 @@ const Services = () => {
                 <div className="gap-5 service flex flex-col sm:flex-row-reverse sm:items-center">
                     <div className="flex flex-col gap-y-3 2xl:pl-4">
                         <div className="text-white equinox-bold tracking-wider uppercase text-xl md:text-2xl 2xl:text-3xl">
-                            2. Custom Code
+                            2. {code.title}
                         </div>
                         <p className="dosis-medium text-white md:text-lg 2xl:text-2xl">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat corporis, odio eaque inventore facilis quidem, deleniti quam minus error ad sint temporibus officiis repudiandae alias, blanditiis nesciunt laborum maxime tenetur!    
+                            {code.description}    
                         </p>
                     </div>
                     <div className="pic p-4 grid place-items-center">
@@ -63,10 +78,10 @@ const Services = () => {
                 <div className="gap-5 service flex flex-col sm:flex-row sm:items-center">
                     <div className="flex flex-col gap-y-3">
                         <div className="text-white equinox-bold tracking-wider uppercase text-xl md:text-2xl 2xl:text-3xl">
-                            3. Expense to asset
+                            3. {asset.title}
                         </div>
                         <p className="dosis-medium text-white md:text-lg 2xl:text-2xl 2xl:pr-4">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat corporis, odio eaque inventore facilis quidem, deleniti quam minus error ad sint temporibus officiis repudiandae alias, blanditiis nesciunt laborum maxime tenetur!    
+                            {asset.description}    
                         </p>
                     </div>
                     <div className="pic p-4 grid place-items-center">

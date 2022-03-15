@@ -1,7 +1,6 @@
-import Head from 'next/head';
 import Nav from '../components/nav/Nav';
-import MobileNav from '../components/nav/MobileNav';
 import Footer from './nav/Footer';
+import Form from './Form'
 
 const Layout = props => {
 
@@ -9,8 +8,10 @@ const Layout = props => {
         <div>
             <Nav />
                 <main className="">
-                    {props.children}
+                    {props.children}                
                 </main>
+            <Form />
+            <Footer />
         </div>
     )
 }

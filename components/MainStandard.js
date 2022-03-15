@@ -16,7 +16,7 @@ const MainStandard = () => {
                     <span className="text-teal tracking-widest">i</span>deas to<br /> <span className="text-orange">r</span>eality
                 </h1>
                 <p className="text-xl dosis-medium md:text-2xl 2xl:text-3xl">
-                    My name is <span className="logo equinox-bold uppercase">Aaron Toliver</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero quasi est earum sed quo fugiat obcaecati rem. Dolorum, itaque fugiat id numquam quidem hic quia error. Commodi, quasi inventore
+                    My name is <span className="logo equinox-bold uppercase">Aaron Toliver</span>. I provide digital solutions for small businesses and individuals. Professional, candid, and cost-effective.
                 </p>
                 <div className="flex min-h-fit gap-x-10">
                     <ContactBtn />

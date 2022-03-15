@@ -25,7 +25,7 @@ const Experience:React.FC<{ projects: Project[] }> = (props) => {
     const { projects } = props;
 
     return (
-        <section id="experience" className="my-20 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+        <section id="work" className="my-20 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60">
             <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-20">Some of My Work</div>
             {/* Container */}
             <div className="flex flex-col items-center gap-10">
