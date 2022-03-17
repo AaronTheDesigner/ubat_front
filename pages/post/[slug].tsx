@@ -46,9 +46,7 @@ type Post = {
 const Post: React.FC<{post: Post}> = (props) => {
 
     const { post } = props;
-    const { title, slug, html, feature_image } = post;
-
-    console.log(feature_image)
+    
     const [enableLoadComments, setEnableLoadComments] = useState<boolean>(true)
 
 
@@ -78,9 +76,9 @@ const Post: React.FC<{post: Post}> = (props) => {
             <Button href="/" name="back" />
                 <div className="gh-content text-lg tracking-wider md:text-xl xl:text-2xl">                    
                     <div className="grid place-items-center" >
-                        <h1>{title}</h1>
+                        <h1>{post.title}</h1>
                     </div>
-                    <div dangerouslySetInnerHTML={{__html: html}} ></div>
+                    <div dangerouslySetInnerHTML={{__html: post.html}} ></div>
 
                     {enableLoadComments && (
                         <button onClick={loadComments} className="bg-orange text-black rounded-lg p-2 hover:text-white transition-all">
