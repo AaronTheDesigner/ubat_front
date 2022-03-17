@@ -72,7 +72,7 @@ const Post: React.FC<{post: Post}> = (props) => {
     // px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60
     return(
         <Layout>
-            <div className=" text-gray-100 text-opacity-90 px-2 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+            <div className=" text-gray-100 mt-10 text-opacity-90 px-2 sm:px-10 md:px-16 lg:px-28 xl:px-60">
             <Button href="/" name="back" />
                 <div className="gh-content text-lg tracking-wider md:text-xl xl:text-2xl">                    
                     <div className="grid place-items-center" >
