@@ -3,6 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 const title = `Let's Talk`
 const ty = `We'll be in touch!`
+const paragraph = `Feel free to fill out all required fields. The more information the better. I'll be sure to get back to you in a timely a manor.`
 
 const Form = () => {
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_NEW_FORM)
@@ -23,8 +24,8 @@ const Form = () => {
         <div className='py-10 px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60' id="contact">
             <div className="mb-10 flex flex-col justify-center items-center lg:px-32">
                 <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-9">{title}</div>
-                <p className="dosis-medium tracking-wide text-white text-base text-center lg:max-w-4xl lg:text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus explicabo maxime voluptates animi necessitatibus ipsa dicta neque rem tenetur eum dolor odio velit accusantium illo, quam facere dolore nobis totam!   
+                <p className="dosis-medium tracking-wide text-white text-base text-center lg:max-w-4xl lg:text-xl">
+                    {paragraph} 
                 </p>
             </div>
             <form action="" onSubmit={handleSubmit} className="max-w-sm m-auto px-5 py-4 bg-lighterblue rounded-lg md:max-w-none lg:max-w-4xl">

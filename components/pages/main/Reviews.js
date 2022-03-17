@@ -5,21 +5,21 @@ import person from '../../../public/assets/person_icon.svg';
 
 const One = {
     image: `url(../assets/jayrequard.jpg)`,
-    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    quote: `Aaron Toliver's creative talent and technical expertise led the way in crafting my media platform to a professional standard. His thoughtfulness and drive to develop the best product for his clients is a rare resource.`,
     name: `Jay Requard`,
     company: `Author`
 } 
 
 const Two = {
     image: `url(../assets/obed.jpg)`,
-    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    quote: `Aaron did a great job with my new website as I pivoted my business from one focus to another.`,
     name: `Obed Arguedas`,
     company: `Inside Out Home Improvement`
 } 
 
 const Three = {
     image: `url(../assets/darrell.jpg)`,
-    quote: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi soluta aliquam officiis porro impedit pariatur mollitia!`,
+    quote: `Aaron did a great job on my website. He was very attentive to my needs, and very responsive when I needed him, keeping me updated on the progress of the site. Great experience and I highly recommend.`,
     name: `Darrell Zamora`,
     company: `Agora Window Cleaning`
 } 
