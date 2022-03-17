@@ -1,12 +1,14 @@
 import { useRouter } from "next/router";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
+import Button from '../../components/Button';
 
 //const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
 async function getPost(slug: string) {
     const res = await fetch(
-        `${process.env.BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${process.env.CONTENT_API_KEY}&fields=title,slug,html`
+        `${process.env.BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${process.env.CONTENT_API_KEY}&fields=title,slug,html,feature_image`
     ).then((res) => res.json())
 
     const posts = res.posts;
@@ -37,13 +39,18 @@ export const getStaticPaths = () => {
 type Post = {
     title: string,
     slug: string,
-    html: string
+    html: string,
+    feature_image: string
 }
 
 const Post: React.FC<{post: Post}> = (props) => {
 
     const { post } = props;
+    const { title, slug, html, feature_image } = post;
+
+    console.log(feature_image)
     const [enableLoadComments, setEnableLoadComments] = useState<boolean>(true)
+
 
     const router = useRouter();
 
@@ -64,21 +71,28 @@ const Post: React.FC<{post: Post}> = (props) => {
     
         document.body.appendChild(script);
     }
+    // px-5 sm:px-10 md:px-16 lg:px-28 xl:px-60
+    return(
+        <Layout>
+            <div className=" text-gray-100 text-opacity-90 px-2 sm:px-10 md:px-16 lg:px-28 xl:px-60">
+            <Button href="/" name="back" />
+                <div className="gh-content text-lg tracking-wider md:text-xl xl:text-2xl">                    
+                    <div className="grid place-items-center" >
+                        <h1>{title}</h1>
+                    </div>
+                    <div dangerouslySetInnerHTML={{__html: html}} ></div>
 
-    return <div >
-        <Link href="/">
-            Back
-        </Link>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{__html: post.html}} ></div>
+                    {enableLoadComments && (
+                        <button onClick={loadComments} className="bg-orange text-black rounded-lg p-2 hover:text-white transition-all">
+                            Load Comments
+                        </button>
+                    )}        
+                    <div id="disqus_thread"></div>
+                </div>                
+            </div>
 
-        {enableLoadComments && (
-            <p onClick={loadComments}>
-                Load Comments
-            </p>
-        )}        
-        <div id="disqus_thread"></div>
-    </div>
+        </Layout>
+    )
 }
 
 export default Post;

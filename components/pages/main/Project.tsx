@@ -53,7 +53,7 @@ const Project:React.FC<{
                     {custom_excerpt}   
                 </p>
                 <div className="flex justify-evenly sm:justify-start">
-                    <Button href="#" name="more"/>
+                    <Button href={`/post/${slug}`} name="more"/>
                 </div>
             </div>
         </div>
