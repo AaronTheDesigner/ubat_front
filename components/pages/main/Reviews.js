@@ -28,7 +28,7 @@ const Reviews = () => {
             <div className="equinox-bold text-white w-full text-4xl text-center uppercase my-9">Hear from others</div>
             <div className="flex flex-wrap justify-center items-center gap-10 w-full">
                 <Review name={One.name} quote={One.quote} image={One.image} company={One.company} />
-                <Review name={Two.name} quote={Two.quote} image={Two.image} company={Two.company} />
+                {/* <Review name={Two.name} quote={Two.quote} image={Two.image} company={Two.company} /> */}
                 <Review name={Three.name} quote={Three.quote} image={Three.image} company={Three.company} />
             </div>
         </section>
