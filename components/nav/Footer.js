@@ -65,6 +65,11 @@ const Footer = () => {
                     <a href="#">Privacy Policy</a>
                 </div>
                 <div className="font-medium mb-1">© Upgrades By AT 2022</div>
+                <div className="font-medium mb-1">
+                    <Link href="https://ubat.herokuapp.com/ghost/">
+                        admin
+                    </Link>
+                </div>
             </div>
         </footer>
     )
