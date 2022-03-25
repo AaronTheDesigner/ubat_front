@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 const title = `Let's Talk`
 const ty = `We'll be in touch!`
-const paragraph = `Feel free to fill out all required fields. The more information the better. I'll be sure to get back to you in a timely a manor.`
+const paragraph = `Feel free to fill out all required fields. The more information the better. I'll be sure to get back to you in a timely maner.`
 
 const Form = () => {
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_NEW_FORM)
