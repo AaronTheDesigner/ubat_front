@@ -7,7 +7,7 @@ const website = {
 
 const code = {
     title: `custom code`,
-    description: `Drag-and-drop web builders can be a... drag. The learning curve may not be worht the time. Unused features may not be worth the price. I will provide a custom code solution that fits your company's exact needs. Pick and choose your features.`
+    description: `Drag-and-drop web builders can be a... drag. The learning curve may not be worth the time. Unused features may not be worth the price. I will provide a custom code solution that fits your company's exact needs. Pick and choose your features.`
 }
 
 const asset = {
