@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import MainStandard from '../components/MainStandard';

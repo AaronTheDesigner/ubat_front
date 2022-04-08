@@ -53,22 +53,29 @@ const Blog:React.FC<{ posts: Post[] }> = (props) => {
     return (
         <Layout className="overflow-hidden" >
             <Head>
-                <title>Blog</title>
-                <link rel="icon" href="/assets/logo.svg" />
+                <title>Upgrades By Aaron Toliver: Blog</title>
+                <meta name="description" content="Web Development, App Development, Blog"/>
+                <meta name="theme" content="#0F1624"/>
+                <meta name="msapplication-navbutton-color" content="#0F1624"/>
+                <meta name="apple-mobile-web-app-status-bar-style" content="#0F1624"/>
+                <link rel="icon" href="/assets/UAT.svg" />
             </Head>
-            <main>
-                <BlogFeature 
-                    title={featuredPost.title}
-                    image={featuredPost.feature_image}
-                    excerpt={featuredPost.custom_excerpt}
-                    tags={featuredPost.tags}
-                    author={featuredPost.primary_author}
-                    slug={featuredPost.slug}
-                />
-                <div className="flex flex-wrap gap-3 justify-center py-5 sm:px-0 md:px-0 lg:px-28">
+            <main className='px-2 sm:px-10 md:px-16 lg:px-28 xl:px-60'>                
+                <div className="grid place-content-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 auto-rows-auto gap-5">
+                    <div className="col-span-1 sm:col-span-2 xl:col-span-3">
+                        <BlogFeature 
+                            title={featuredPost.title}
+                            image={featuredPost.feature_image}
+                            excerpt={featuredPost.custom_excerpt}
+                            tags={featuredPost.tags}
+                            author={featuredPost.primary_author}
+                            slug={featuredPost.slug}
+                        />
+                    </div>
+                    
                     {standardPosts.map(post => {
                         return ( 
-                        <div className="flex flex-col w-80 bg-gray-200 p-3 rounded-lg w shadow-md justify-between items-center" key={post.id}>
+                        <div className="" key={post.id}>
                             <PostCard
                                 title={post.title}
                                 image={post.feature_image}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from '../../Button';
 
 type Author = {
     profile_image: string,
@@ -27,44 +28,32 @@ const PostCard:React.FC<{
     const modedTags = tags.filter(tag => tag.name != 'Blog');
 
     return (
-        <div className="flex flex-col justify-between h-full">
-            <div className="w-full h-48 relative">
-                <Image 
-                    src={image}
-                    layout="fill"
-                    className="rounded-lg"
-                />
-            </div>        
-            <h1 className="font-bold text-xl text-center capitalize my-2">
-                    {title}
-            </h1>
-            <span className="flex items-center justify-center gap-3" >
-                    <Image 
-                        src={author.profile_image}
-                        height={25}
-                        width={25}
-                        className="rounded-full"
-                    />
-                    <p className="font-bold capitalize ">
-                        {author.name}
-                    </p>
-            </span>
-            <div className="flex flex-col text-center justify-between">
-                <ul className="flex justify-evenly my-2 gap-2 flex-wrap">
-                        {modedTags.map(tag => {
-                            return <li className="rounded-full bg-white py-1 px-2" key={tag.id}>
-                                {tag.name}
-                            </li>
-                        })}
-                </ul>
-                <p className="my-3">
+        <div className="w-full flex flex-col rounded-lg bg-lighterblue" style={{}}>
+            <div className="feature-pres rounded-t-lg" style={{
+                background: `url(${image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: 'grey',
+                backgroundBlendMode: 'multiply'
+                
+            }}>
+                <div className="text-white equinox-bold capitalize w-full text-center text-2xl my-24 tracking-wide">{title}</div>
+            </div>
+            <div className="feature-info flex flex-col">
+                <p className="my-3 px-3 text-white dosis-semibold tracking-wider lg:text-lg">
                     {excerpt}
                 </p>
-                <Link href="/post/[slug]" as={`/post/${slug}`} >
-                    <span className="cursor-pointer text-lg opacity-75 inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8 bg-white">
-                        Read
-                    </span>
-                </Link>
+                <span className='px-3 my-2 flex gap-2'>
+                    {modedTags.map(tag => {
+                        return (
+                            <div className="bg-gradient-to-b from-blue text-white dosis-medium px-2 py-1 rounded-lg" key={tag.id}>{tag.name}</div>
+                        )
+                    })}
+                </span>
+                <div className="flex items-center w-full mb-3 px-3">
+                    <Button href={`/post/${slug}`} name="read" />
+                </div>                
             </div>
         </div>
     )

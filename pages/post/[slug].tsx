@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
+import Image from 'next/image';
 
 //const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
@@ -74,7 +75,7 @@ const Post: React.FC<{post: Post}> = (props) => {
         <Layout>
             <div className=" text-gray-100 mt-10 text-opacity-90 px-2 sm:px-10 md:px-16 lg:px-28 xl:px-60">
             <Button href="/" name="back" />
-                <div className="gh-content text-lg tracking-wider md:text-xl xl:text-2xl">                    
+                <div className="gh-content text-lg tracking-wider md:text-xl xl:text-2xl">          
                     <div className="grid place-items-center" >
                         <h1>{post.title}</h1>
                     </div>
